@@ -8,8 +8,8 @@ dog = {}
 dog = {
     'Name': 'Gerry',
     'Breed': 'Chihushua',
-    'Legs': 'Paw',
-    'Age': '2' }
+    'Legs': 4,
+    'Age': 2 }
 
 print(dog)
 
@@ -20,7 +20,7 @@ student = {
     'last_name': 'Pham',
     'gender': 'Male',
     'age': '19',
-    'martial_Status': 'Single',
+    'martial_status': 'Single',
     'Skills': ['Organization', 'Coding', 'Pay-attention To Detail', 'Teamwork', 'Communcation Skills', 'Event setup and Support', 'Reliablity'],
     'Country': 'United States',
     'City': 'Havertown',
@@ -33,4 +33,36 @@ print(len(student))
 
 #5. Get the value of skills and check the data type, it should be a list.
 
-#6. 
+print(type(student.get('Skills')))
+
+#6. Modify the skills values by adding one or two skills.
+
+student['Skills'].append('Python')
+student['Skills'].append('C++')
+print(student)
+
+#7. Get the dictionary keys as a list.
+
+keys = student.keys()
+
+print(keys)
+
+#8. Get the dictionary values as a list
+
+values = student.values()
+
+print(values)
+
+#9. Change the dictionary to a list of tuples using items() method
+
+print(student.items())
+
+#10. Delete one of the items in the dictionary.
+
+del student['Address']
+
+print(student)
+
+#11. Delete one of the dictionaries.
+
+del dog
